@@ -6,16 +6,22 @@
 //
 
 import SwiftUI
+import FirebaseRemoteConfig
+import HandyRepairNetwork
 
 struct ContentView: View {
+  @RemoteConfigProperty(key: "startupConfig", fallback: StartupConfig())
+  
+  var startupConfig
+  
+  init(){}
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+      List {
+        if let startupConfig {
+          Text(startupConfig.host.absoluteString)
+          Text(startupConfig.path)
         }
-        .padding()
+      }
     }
 }
 

@@ -1,5 +1,5 @@
 //
-//  SIT.xcconfig
+//  PPE.xcconfig
 //  HandyRepairApp
 //
 //  Created by Nicolá Domingues on 22/01/2025.
@@ -8,4 +8,5 @@
 // Configuration settings file format documentation can be found at:
 // https://help.apple.com/xcode/#/dev745c5c974
 
-app_name = Handy Repair SIT
+app_name = Handy Repair PPE
+bundle_id = nsdev.handy.repair.ppe

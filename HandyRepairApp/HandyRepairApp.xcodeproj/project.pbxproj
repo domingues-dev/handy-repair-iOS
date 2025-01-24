@@ -6,6 +6,15 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		84132A992D431B6A0090663E /* HandyRepairNetwork in Frameworks */ = {isa = PBXBuildFile; productRef = 84132A982D431B6A0090663E /* HandyRepairNetwork */; };
+		843FE0262D41C32600F5A855 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 843FE0252D41C32600F5A855 /* FirebaseAnalytics */; };
+		843FE0282D41C32600F5A855 /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 843FE0272D41C32600F5A855 /* FirebaseCore */; };
+		843FE02A2D41C32600F5A855 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 843FE0292D41C32600F5A855 /* FirebaseCrashlytics */; };
+		843FE02C2D41C32600F5A855 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 843FE02B2D41C32600F5A855 /* FirebaseMessaging */; };
+		843FE02E2D41C32600F5A855 /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = 843FE02D2D41C32600F5A855 /* FirebaseRemoteConfig */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		843FDFE62D41B99900F5A855 /* HandyRepairApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HandyRepairApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		843FDFF82D41BA1200F5A855 /* HandyRepairNetwork */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = HandyRepairNetwork; sourceTree = "<group>"; };
@@ -14,9 +23,22 @@
 		843FDFFB2D41BAB000F5A855 /* HandyRepairDB */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = HandyRepairDB; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		843FE0332D41C58500F5A855 /* Exceptions for "HandyRepairApp" folder in "HandyRepairApp" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 843FDFE52D41B99900F5A855 /* HandyRepairApp */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		843FDFE82D41B99900F5A855 /* HandyRepairApp */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				843FE0332D41C58500F5A855 /* Exceptions for "HandyRepairApp" folder in "HandyRepairApp" target */,
+			);
 			path = HandyRepairApp;
 			sourceTree = "<group>";
 		};
@@ -27,12 +49,25 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				843FE02C2D41C32600F5A855 /* FirebaseMessaging in Frameworks */,
+				843FE02A2D41C32600F5A855 /* FirebaseCrashlytics in Frameworks */,
+				843FE0282D41C32600F5A855 /* FirebaseCore in Frameworks */,
+				843FE0262D41C32600F5A855 /* FirebaseAnalytics in Frameworks */,
+				843FE02E2D41C32600F5A855 /* FirebaseRemoteConfig in Frameworks */,
+				84132A992D431B6A0090663E /* HandyRepairNetwork in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		84132A972D431B6A0090663E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		843FDFDD2D41B99900F5A855 = {
 			isa = PBXGroup;
 			children = (
@@ -41,6 +76,7 @@
 				843FDFF92D41BA4D00F5A855 /* HandyRepairUI */,
 				843FDFF82D41BA1200F5A855 /* HandyRepairNetwork */,
 				843FDFE82D41B99900F5A855 /* HandyRepairApp */,
+				84132A972D431B6A0090663E /* Frameworks */,
 				843FDFE72D41B99900F5A855 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -63,6 +99,8 @@
 				843FDFE22D41B99900F5A855 /* Sources */,
 				843FDFE32D41B99900F5A855 /* Frameworks */,
 				843FDFE42D41B99900F5A855 /* Resources */,
+				843FE03E2D4309C000F5A855 /* Install GoogleService-Info  */,
+				843FE03C2D41D6DB00F5A855 /* Crashlytics */,
 			);
 			buildRules = (
 			);
@@ -73,6 +111,12 @@
 			);
 			name = HandyRepairApp;
 			packageProductDependencies = (
+				843FE0252D41C32600F5A855 /* FirebaseAnalytics */,
+				843FE0272D41C32600F5A855 /* FirebaseCore */,
+				843FE0292D41C32600F5A855 /* FirebaseCrashlytics */,
+				843FE02B2D41C32600F5A855 /* FirebaseMessaging */,
+				843FE02D2D41C32600F5A855 /* FirebaseRemoteConfig */,
+				84132A982D431B6A0090663E /* HandyRepairNetwork */,
 			);
 			productName = HandyRepairApp;
 			productReference = 843FDFE62D41B99900F5A855 /* HandyRepairApp.app */;
@@ -102,6 +146,9 @@
 			);
 			mainGroup = 843FDFDD2D41B99900F5A855;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				843FE0242D41C32600F5A855 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 843FDFE72D41B99900F5A855 /* Products */;
 			projectDirPath = "";
@@ -122,6 +169,50 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		843FE03C2D41D6DB00F5A855 /* Crashlytics */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}",
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${PRODUCT_NAME}",
+				"$(TARGET_BUILD_DIR)/$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/GoogleService-Info.plist",
+				"$(TARGET_BUILD_DIR)/$(EXECUTABLE_PATH)",
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${PRODUCT_NAME}.debug.dylib",
+			);
+			name = Crashlytics;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${BUILD_DIR%/Build/*}/SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/run\"\n";
+		};
+		843FE03E2D4309C000F5A855 /* Install GoogleService-Info  */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Install GoogleService-Info ";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "environment=\"default\"\n\n# Regex to extract the scheme name from the Build Configuration\n# We have named our Build Configurations as Debug-dev, Debug-prod etc.\n# Here, dev and prod are the scheme names. This kind of naming is required by Flutter for flavors to work.\n# We are using the $CONFIGURATION variable available in the XCode build environment to extract \n# the environment (or flavor)\n# For eg.\n# If CONFIGURATION=\"Debug-prod\", then environment will get set to \"prod\".\nif [[ $CONFIGURATION =~ -([^-]*)$ ]]; then\nenvironment=${BASH_REMATCH[1]}\nfi\n\necho $environment\n\n# Name and path of the resource we're copying\nGOOGLESERVICE_INFO_PLIST=GoogleService-Info.plist\nGOOGLESERVICE_INFO_FILE=${PROJECT_DIR}/HandyRepairApp/Configurations/${environment}/${GOOGLESERVICE_INFO_PLIST}\n\n# Make sure GoogleService-Info.plist exists\necho \"Looking for ${GOOGLESERVICE_INFO_PLIST} in ${GOOGLESERVICE_INFO_FILE}\"\nif [ ! -f $GOOGLESERVICE_INFO_FILE ]\nthen\necho \"No GoogleService-Info.plist found. Please ensure it's in the proper directory.\"\nexit 1\nfi\n\n# Get a reference to the destination location for the GoogleService-Info.plist\n# This is the default location where Firebase init code expects to find GoogleServices-Info.plist file\nPLIST_DESTINATION=${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app\necho \"Will copy ${GOOGLESERVICE_INFO_PLIST} to final destination: ${PLIST_DESTINATION}\"\n\n# Copy over the prod GoogleService-Info.plist for Release builds\ncp \"${GOOGLESERVICE_INFO_FILE}\" \"${PLIST_DESTINATION}\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		843FDFE22D41B99900F5A855 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -133,7 +224,7 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		843FDFF32D41B99B00F5A855 /* Debug */ = {
+		843FDFF32D41B99B00F5A855 /* Debug-PRD */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -168,9 +259,10 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_DEBUG_DYLIB = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -192,9 +284,9 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
-			name = Debug;
+			name = "Debug-PRD";
 		};
-		843FDFF42D41B99B00F5A855 /* Release */ = {
+		843FDFF42D41B99B00F5A855 /* Release-PRD */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -229,9 +321,10 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_DEBUG_DYLIB = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -245,23 +338,25 @@
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 			};
-			name = Release;
+			name = "Release-PRD";
 		};
-		843FDFF62D41B99B00F5A855 /* Debug */ = {
+		843FDFF62D41B99B00F5A855 /* Debug-PRD */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReferenceAnchor = 843FDFE82D41B99900F5A855 /* HandyRepairApp */;
-			baseConfigurationReferenceRelativePath = Configurations/PRD.xcconfig;
+			baseConfigurationReferenceRelativePath = Configurations/PRD/PRD.xcconfig;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = HandyRepairApp/HandyRepairApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = "crashlytics-test";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_ASSET_PATHS = "\"HandyRepairApp/Preview Content\"";
 				DEVELOPMENT_TEAM = ZPY4GXD995;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HandyRepairApp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "$(app_name)";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -278,7 +373,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 15.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = nsdev.HandyRepairApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(bundle_id)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -288,23 +383,24 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				XROS_DEPLOYMENT_TARGET = 2.2;
 			};
-			name = Debug;
+			name = "Debug-PRD";
 		};
-		843FDFF72D41B99B00F5A855 /* Release */ = {
+		843FDFF72D41B99B00F5A855 /* Release-PRD */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReferenceAnchor = 843FDFE82D41B99900F5A855 /* HandyRepairApp */;
-			baseConfigurationReferenceRelativePath = Configurations/PRD.xcconfig;
+			baseConfigurationReferenceRelativePath = Configurations/PRD/PRD.xcconfig;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = HandyRepairApp/HandyRepairApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = "crashlytics-test";
 				DEVELOPMENT_ASSET_PATHS = "\"HandyRepairApp/Preview Content\"";
 				DEVELOPMENT_TEAM = ZPY4GXD995;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HandyRepairApp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "$(app_name)";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -321,7 +417,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 15.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = nsdev.HandyRepairApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(bundle_id)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -331,9 +427,9 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				XROS_DEPLOYMENT_TARGET = 2.2;
 			};
-			name = Release;
+			name = "Release-PRD";
 		};
-		843FE0182D41BCFF00F5A855 /* Debug PPE */ = {
+		843FE0182D41BCFF00F5A855 /* Debug-PPE */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -368,9 +464,10 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_DEBUG_DYLIB = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -392,23 +489,25 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
-			name = "Debug PPE";
+			name = "Debug-PPE";
 		};
-		843FE0192D41BCFF00F5A855 /* Debug PPE */ = {
+		843FE0192D41BCFF00F5A855 /* Debug-PPE */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReferenceAnchor = 843FDFE82D41B99900F5A855 /* HandyRepairApp */;
-			baseConfigurationReferenceRelativePath = Configurations/PPE.xcconfig;
+			baseConfigurationReferenceRelativePath = Configurations/PPE/PPE.xcconfig;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = HandyRepairApp/HandyRepairApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = "crashlytics-test";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_ASSET_PATHS = "\"HandyRepairApp/Preview Content\"";
 				DEVELOPMENT_TEAM = ZPY4GXD995;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HandyRepairApp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "$(app_name)";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -425,7 +524,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 15.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = nsdev.HandyRepairApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(bundle_id)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -435,9 +534,9 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				XROS_DEPLOYMENT_TARGET = 2.2;
 			};
-			name = "Debug PPE";
+			name = "Debug-PPE";
 		};
-		843FE01A2D41BD0200F5A855 /* Debug SIT */ = {
+		843FE01A2D41BD0200F5A855 /* Debug-SIT */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -472,9 +571,10 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_DEBUG_DYLIB = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -496,23 +596,25 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
-			name = "Debug SIT";
+			name = "Debug-SIT";
 		};
-		843FE01B2D41BD0200F5A855 /* Debug SIT */ = {
+		843FE01B2D41BD0200F5A855 /* Debug-SIT */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReferenceAnchor = 843FDFE82D41B99900F5A855 /* HandyRepairApp */;
-			baseConfigurationReferenceRelativePath = Configurations/SIT.xcconfig;
+			baseConfigurationReferenceRelativePath = Configurations/SIT/SIT.xcconfig;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = HandyRepairApp/HandyRepairApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = "crashlytics-test";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_ASSET_PATHS = "\"HandyRepairApp/Preview Content\"";
 				DEVELOPMENT_TEAM = ZPY4GXD995;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HandyRepairApp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "$(app_name)";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -529,7 +631,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 15.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = nsdev.HandyRepairApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(bundle_id)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -539,9 +641,9 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				XROS_DEPLOYMENT_TARGET = 2.2;
 			};
-			name = "Debug SIT";
+			name = "Debug-SIT";
 		};
-		843FE01C2D41BD2700F5A855 /* Release SIT */ = {
+		843FE01C2D41BD2700F5A855 /* Release-SIT */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -576,9 +678,10 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_DEBUG_DYLIB = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -592,23 +695,24 @@
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 			};
-			name = "Release SIT";
+			name = "Release-SIT";
 		};
-		843FE01D2D41BD2700F5A855 /* Release SIT */ = {
+		843FE01D2D41BD2700F5A855 /* Release-SIT */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReferenceAnchor = 843FDFE82D41B99900F5A855 /* HandyRepairApp */;
-			baseConfigurationReferenceRelativePath = Configurations/SIT.xcconfig;
+			baseConfigurationReferenceRelativePath = Configurations/SIT/SIT.xcconfig;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = HandyRepairApp/HandyRepairApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = "crashlytics-test";
 				DEVELOPMENT_ASSET_PATHS = "\"HandyRepairApp/Preview Content\"";
 				DEVELOPMENT_TEAM = ZPY4GXD995;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HandyRepairApp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "$(app_name)";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -625,7 +729,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 15.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = nsdev.HandyRepairApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(bundle_id)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -635,9 +739,9 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				XROS_DEPLOYMENT_TARGET = 2.2;
 			};
-			name = "Release SIT";
+			name = "Release-SIT";
 		};
-		843FE01E2D41BD2E00F5A855 /* Release PPE */ = {
+		843FE01E2D41BD2E00F5A855 /* Release-PPE */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -672,9 +776,10 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_DEBUG_DYLIB = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -688,23 +793,24 @@
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 			};
-			name = "Release PPE";
+			name = "Release-PPE";
 		};
-		843FE01F2D41BD2E00F5A855 /* Release PPE */ = {
+		843FE01F2D41BD2E00F5A855 /* Release-PPE */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReferenceAnchor = 843FDFE82D41B99900F5A855 /* HandyRepairApp */;
-			baseConfigurationReferenceRelativePath = Configurations/PPE.xcconfig;
+			baseConfigurationReferenceRelativePath = Configurations/PPE/PPE.xcconfig;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = HandyRepairApp/HandyRepairApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = "crashlytics-test";
 				DEVELOPMENT_ASSET_PATHS = "\"HandyRepairApp/Preview Content\"";
 				DEVELOPMENT_TEAM = ZPY4GXD995;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HandyRepairApp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "$(app_name)";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -721,7 +827,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 15.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = nsdev.HandyRepairApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(bundle_id)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -731,7 +837,7 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				XROS_DEPLOYMENT_TARGET = 2.2;
 			};
-			name = "Release PPE";
+			name = "Release-PPE";
 		};
 /* End XCBuildConfiguration section */
 
@@ -739,30 +845,73 @@
 		843FDFE12D41B99900F5A855 /* Build configuration list for PBXProject "HandyRepairApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				843FDFF32D41B99B00F5A855 /* Debug */,
-				843FE01A2D41BD0200F5A855 /* Debug SIT */,
-				843FE0182D41BCFF00F5A855 /* Debug PPE */,
-				843FDFF42D41B99B00F5A855 /* Release */,
-				843FE01C2D41BD2700F5A855 /* Release SIT */,
-				843FE01E2D41BD2E00F5A855 /* Release PPE */,
+				843FDFF32D41B99B00F5A855 /* Debug-PRD */,
+				843FE01A2D41BD0200F5A855 /* Debug-SIT */,
+				843FE0182D41BCFF00F5A855 /* Debug-PPE */,
+				843FDFF42D41B99B00F5A855 /* Release-PRD */,
+				843FE01C2D41BD2700F5A855 /* Release-SIT */,
+				843FE01E2D41BD2E00F5A855 /* Release-PPE */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "Release-PRD";
 		};
 		843FDFF52D41B99B00F5A855 /* Build configuration list for PBXNativeTarget "HandyRepairApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				843FDFF62D41B99B00F5A855 /* Debug */,
-				843FE01B2D41BD0200F5A855 /* Debug SIT */,
-				843FE0192D41BCFF00F5A855 /* Debug PPE */,
-				843FDFF72D41B99B00F5A855 /* Release */,
-				843FE01D2D41BD2700F5A855 /* Release SIT */,
-				843FE01F2D41BD2E00F5A855 /* Release PPE */,
+				843FDFF62D41B99B00F5A855 /* Debug-PRD */,
+				843FE01B2D41BD0200F5A855 /* Debug-SIT */,
+				843FE0192D41BCFF00F5A855 /* Debug-PPE */,
+				843FDFF72D41B99B00F5A855 /* Release-PRD */,
+				843FE01D2D41BD2700F5A855 /* Release-SIT */,
+				843FE01F2D41BD2E00F5A855 /* Release-PPE */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "Release-PRD";
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		843FE0242D41C32600F5A855 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.7.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		84132A982D431B6A0090663E /* HandyRepairNetwork */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = HandyRepairNetwork;
+		};
+		843FE0252D41C32600F5A855 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 843FE0242D41C32600F5A855 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		843FE0272D41C32600F5A855 /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 843FE0242D41C32600F5A855 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+		843FE0292D41C32600F5A855 /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 843FE0242D41C32600F5A855 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+		843FE02B2D41C32600F5A855 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 843FE0242D41C32600F5A855 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+		843FE02D2D41C32600F5A855 /* FirebaseRemoteConfig */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 843FE0242D41C32600F5A855 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseRemoteConfig;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 843FDFDE2D41B99900F5A855 /* Project object */;
 }
