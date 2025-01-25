@@ -16,10 +16,20 @@ struct ContentView: View {
   
   init(){}
     var body: some View {
-      List {
-        if let startupConfig {
-          Text(startupConfig.host.absoluteString)
-          Text(startupConfig.path)
+      NavigationStack {
+        List {
+          if let startupConfig {
+            Text(startupConfig.host.absoluteString)
+            Text(startupConfig.path)
+          }
+        }
+        .toolbar {
+          ToolbarItem(placement: .topBarTrailing) {
+            Button("Crash") {
+              let x = [0]
+              print(x[1])
+            }
+          }
         }
       }
     }

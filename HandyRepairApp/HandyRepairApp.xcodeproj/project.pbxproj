@@ -27,6 +27,9 @@
 		843FE0332D41C58500F5A855 /* Exceptions for "HandyRepairApp" folder in "HandyRepairApp" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				"Configurations/PPE/GoogleService-Info.plist",
+				"Configurations/PRD/GoogleService-Info.plist",
+				"Configurations/SIT/GoogleService-Info.plist",
 				Info.plist,
 			);
 			target = 843FDFE52D41B99900F5A855 /* HandyRepairApp */;
