@@ -11,30 +11,20 @@ import HandyRepairNetwork
 
 struct ContentView: View {
   @RemoteConfigProperty(key: "startupConfig", fallback: StartupConfig())
-  
   var startupConfig
-  
-  init(){}
+  private let signInButton: () -> AnyView
+  init(@ViewBuilder signInButton: @escaping () -> AnyView){
+    self.signInButton = signInButton
+  }
     var body: some View {
-      NavigationStack {
-        List {
-          if let startupConfig {
-            Text(startupConfig.host.absoluteString)
-            Text(startupConfig.path)
-          }
-        }
-        .toolbar {
-          ToolbarItem(placement: .topBarTrailing) {
-            Button("Crash") {
-              let x = [0]
-              print(x[1])
-            }
-          }
-        }
+      HStack {
+        Text("Hello world!")
+        Text("Hello world!")
+        signInButton()
       }
     }
 }
 
 #Preview {
-    ContentView()
+  ContentView(signInButton: { AnyView(EmptyView())})
 }

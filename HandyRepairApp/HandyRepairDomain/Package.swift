@@ -4,18 +4,19 @@
 import PackageDescription
 
 let package = Package(
-    name: "HandyRepairDomain",
-    products: [
-        // Products define the executables and libraries a package produces, making them visible to other packages.
-        .library(
-            name: "HandyRepairDomain",
-            targets: ["HandyRepairDomain"]),
-    ],
-    targets: [
-        // Targets are the basic building blocks of a package, defining a module or a test suite.
-        // Targets can depend on other targets in this package and products from dependencies.
-        .target(
-            name: "HandyRepairDomain"),
-
-    ]
+  name: "HandyRepairDomain",
+  platforms: [.iOS(.v18)],
+  products: [
+    .library(
+      name: "HandyRepairDomain",
+      targets: ["HandyRepairDomain"]),
+    .library(
+      name: "HandyRepairExtensions",
+      targets: ["HandyRepairExtensions"]
+    )
+  ],
+  targets: [
+    .target(name: "HandyRepairDomain", dependencies: ["HandyRepairExtensions"]),
+    .target(name: "HandyRepairExtensions")
+  ]
 )

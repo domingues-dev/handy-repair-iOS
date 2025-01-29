@@ -13,6 +13,8 @@
 		843FE02A2D41C32600F5A855 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 843FE0292D41C32600F5A855 /* FirebaseCrashlytics */; };
 		843FE02C2D41C32600F5A855 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 843FE02B2D41C32600F5A855 /* FirebaseMessaging */; };
 		843FE02E2D41C32600F5A855 /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = 843FE02D2D41C32600F5A855 /* FirebaseRemoteConfig */; };
+		8490C8F52D4533DF007A16AE /* Authentication in Frameworks */ = {isa = PBXBuildFile; productRef = 8490C8F42D4533DF007A16AE /* Authentication */; };
+		84BB108D2D499BC600B02A68 /* HandyRepairUI in Frameworks */ = {isa = PBXBuildFile; productRef = 84BB108C2D499BC600B02A68 /* HandyRepairUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,7 @@
 		843FDFF92D41BA4D00F5A855 /* HandyRepairUI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = HandyRepairUI; sourceTree = "<group>"; };
 		843FDFFA2D41BA7300F5A855 /* HandyRepairDomain */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = HandyRepairDomain; sourceTree = "<group>"; };
 		843FDFFB2D41BAB000F5A855 /* HandyRepairDB */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = HandyRepairDB; sourceTree = "<group>"; };
+		8490C8F32D4533A6007A16AE /* handy-repair-iOS */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = "handy-repair-iOS"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -54,6 +57,8 @@
 			files = (
 				843FE02C2D41C32600F5A855 /* FirebaseMessaging in Frameworks */,
 				843FE02A2D41C32600F5A855 /* FirebaseCrashlytics in Frameworks */,
+				84BB108D2D499BC600B02A68 /* HandyRepairUI in Frameworks */,
+				8490C8F52D4533DF007A16AE /* Authentication in Frameworks */,
 				843FE0282D41C32600F5A855 /* FirebaseCore in Frameworks */,
 				843FE0262D41C32600F5A855 /* FirebaseAnalytics in Frameworks */,
 				843FE02E2D41C32600F5A855 /* FirebaseRemoteConfig in Frameworks */,
@@ -74,6 +79,7 @@
 		843FDFDD2D41B99900F5A855 = {
 			isa = PBXGroup;
 			children = (
+				8490C8F32D4533A6007A16AE /* handy-repair-iOS */,
 				843FDFFB2D41BAB000F5A855 /* HandyRepairDB */,
 				843FDFFA2D41BA7300F5A855 /* HandyRepairDomain */,
 				843FDFF92D41BA4D00F5A855 /* HandyRepairUI */,
@@ -120,6 +126,8 @@
 				843FE02B2D41C32600F5A855 /* FirebaseMessaging */,
 				843FE02D2D41C32600F5A855 /* FirebaseRemoteConfig */,
 				84132A982D431B6A0090663E /* HandyRepairNetwork */,
+				8490C8F42D4533DF007A16AE /* Authentication */,
+				84BB108C2D499BC600B02A68 /* HandyRepairUI */,
 			);
 			productName = HandyRepairApp;
 			productReference = 843FDFE62D41B99900F5A855 /* HandyRepairApp.app */;
@@ -146,6 +154,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"pt-PT",
 			);
 			mainGroup = 843FDFDD2D41B99900F5A855;
 			minimizedProjectReferenceProxies = 1;
@@ -285,6 +294,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = "Debug-PRD";
@@ -340,6 +350,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 			};
 			name = "Release-PRD";
 		};
@@ -490,6 +501,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = "Debug-PPE";
@@ -597,6 +609,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = "Debug-SIT";
@@ -697,6 +710,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 			};
 			name = "Release-SIT";
 		};
@@ -795,6 +809,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 			};
 			name = "Release-PPE";
 		};
@@ -913,6 +928,14 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 843FE0242D41C32600F5A855 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseRemoteConfig;
+		};
+		8490C8F42D4533DF007A16AE /* Authentication */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Authentication;
+		};
+		84BB108C2D499BC600B02A68 /* HandyRepairUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = HandyRepairUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

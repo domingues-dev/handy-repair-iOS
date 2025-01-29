@@ -9,7 +9,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>nsdev.handy.repair</string>
+	<string>handy-repair.pt</string>
 	<key>PROJECT_ID</key>
 	<string>handyrepair-64b9a</string>
 	<key>STORAGE_BUCKET</key>
@@ -25,6 +25,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:1090257953396:ios:e2399c97e2078bbfa0a721</string>
+	<string>1:1090257953396:ios:78df0f3186ae8dc8a0a721</string>
 </dict>
 </plist>

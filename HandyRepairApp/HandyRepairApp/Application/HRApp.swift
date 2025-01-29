@@ -6,17 +6,20 @@
 //
 
 import SwiftUI
-import HandyRepairNetwork
-import Firebase
+import AuthenticationServices
 
 @main
 struct HRApp: App {
+  @Environment(\.authorizationController)
+  private var authorizationController
+  
   @UIApplicationDelegateAdaptor(HRAppDelegate.self)
   var appDelegate
   
     var body: some Scene {
         WindowGroup {
-          ContentView()
+          ContentView(
+            signInButton: signInButton)
             .task {
               do {
                 try await appDelegate.configProvider.start()
@@ -26,4 +29,11 @@ struct HRApp: App {
             }
         }
     }
+  
+  private func signInButton() -> AnyView {
+    SignInButtonAdapter.make(
+      with: authorizationController,
+      provider: appDelegate.signInProvider
+    )
+  }
 }
