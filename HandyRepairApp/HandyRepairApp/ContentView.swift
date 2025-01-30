@@ -8,23 +8,27 @@
 import SwiftUI
 import FirebaseRemoteConfig
 import HandyRepairNetwork
+import HandyRepairUI
 
 struct ContentView: View {
   @RemoteConfigProperty(key: "startupConfig", fallback: StartupConfig())
   var startupConfig
-  private let signInButton: () -> AnyView
-  init(@ViewBuilder signInButton: @escaping () -> AnyView){
-    self.signInButton = signInButton
+  private let appEventHandler: (HRAppEvent) async -> Void
+  
+  init(appEventHandler: @escaping (HRAppEvent) async -> Void){
+    self.appEventHandler = appEventHandler
   }
     var body: some View {
       HStack {
-        Text("Hello world!")
-        Text("Hello world!")
-        signInButton()
+        SignInButton {
+          await appEventHandler(.authenticationEvent(.signInWithAppleButtonTapped))
+        }
       }
     }
 }
 
 #Preview {
-  ContentView(signInButton: { AnyView(EmptyView())})
+  ContentView {
+    print(String(reflecting: $0))
+  }
 }

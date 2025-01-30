@@ -11,29 +11,33 @@ import AuthenticationServices
 @main
 struct HRApp: App {
   @Environment(\.authorizationController)
-  private var authorizationController
+  private var authController
   
   @UIApplicationDelegateAdaptor(HRAppDelegate.self)
   var appDelegate
   
-    var body: some Scene {
-        WindowGroup {
-          ContentView(
-            signInButton: signInButton)
-            .task {
-              do {
-                try await appDelegate.configProvider.start()
-              } catch {
-                print(error.localizedDescription)
-              }
-            }
-        }
-    }
+  @State
+  private var viewModel = HRAppViewModel()
   
-  private func signInButton() -> AnyView {
-    SignInButtonAdapter.make(
-      with: authorizationController,
-      provider: appDelegate.signInProvider
-    )
+  var body: some Scene {
+    WindowGroup {
+      ContentView(appEventHandler: contentViewEventHandler)
+      .task {
+        do {
+          try await appDelegate.configProvider.start()
+        } catch {
+          print(error.localizedDescription)
+        }
+      }
+    }
+  }
+  
+  private func contentViewEventHandler(_ event: HRAppEvent) async {
+    if case .authenticationEvent(.signInWithAppleButtonTapped) = event {
+      let authEvent = await appDelegate.signIn(with: authController.performRequest)
+      viewModel.handleAppEvent(.authenticationEvent(authEvent))
+    } else {
+      viewModel.handleAppEvent(event)
+    }
   }
 }

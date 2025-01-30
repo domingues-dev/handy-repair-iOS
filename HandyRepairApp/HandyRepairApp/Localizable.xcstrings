@@ -2,6 +2,7 @@
   "sourceLanguage" : "en",
   "strings" : {
     "Hello world!" : {
+      "extractionState" : "stale",
       "localizations" : {
         "pt-PT" : {
           "stringUnit" : {

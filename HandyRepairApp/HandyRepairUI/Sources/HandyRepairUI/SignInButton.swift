@@ -10,34 +10,58 @@ import SwiftUI
 public struct SignInButton: View {
   @Environment(\.colorScheme)
   private var colorScheme
+  @State private var isLoading = false
+  private let action: () async -> Void
   
-  private let action: () -> Void
+  private var loadingTint: Color {
+    colorScheme == .light ? .white : .black
+  }
   
-  public init(action: @escaping () -> Void) {
+  private var buttonForegroundColor: Color {
+    isLoading ? .clear :
+    colorScheme == .light ? .white : .black
+  }
+  
+  private var buttonBackgroundColor: Color {
+    colorScheme == .light ? Color.black.opacity(0.4) : .white.opacity(0.4)
+  }
+  
+  public init(action: @escaping () async -> Void) {
     self.action = action
   }
   
   public var body: some View {
     Button {
-      action()
+      Task {
+        isLoading = true
+        await action()
+        isLoading = false
+      }
     } label: {
       ViewThatFits {
         Label(Localization.signInButtonTitle, systemImage: "apple.logo")
           .padding(.horizontal)
           .frame(height: 44)
-
+        
         Image(systemName: "apple.logo")
           .padding()
           .frame(width: 44, height: 44)
           .aspectRatio(1, contentMode: .fit)
       }
-      .foregroundStyle(colorScheme == .light ? Color.white : .black)
+      .foregroundStyle(buttonForegroundColor)
       .font(.title3)
+      .overlay(loadingView)
       .background(.ultraThinMaterial)
-      .background(colorScheme == .light ? Color.black.opacity(0.4) : .white.opacity(0.4) ,in: .rect(cornerRadius: 10))
+      .background(buttonBackgroundColor ,in: .rect(cornerRadius: 10))
       .shadow(radius: 1.5, x: 2, y: 2)
     }
-    .environment(\.colorScheme, .dark)
+  }
+  
+  @ViewBuilder
+  private var loadingView: some View {
+    ProgressView()
+      .opacity(isLoading ? 1 : 0)
+      .tint(loadingTint)
   }
 }
 
@@ -47,7 +71,7 @@ public struct SignInButton: View {
       .ignoresSafeArea()
     HStack {
       Text("Hello world!")
-//      Text("Hello world!")
+      //      Text("Hello world!")
       SignInButton(action: {})
     }
   }

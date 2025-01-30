@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct User: Sendable {
+public struct AuthUser: Sendable {
   public let email: String?
   public let isEmailVerified: Bool
   public let isAnonymous: Bool
