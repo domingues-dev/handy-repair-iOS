@@ -10,9 +10,26 @@ import SwiftUI
 public struct SignInButton: View {
   @Environment(\.colorScheme)
   private var colorScheme
-  @State private var isLoading = false
-  private let action: () async -> Void
   
+  @State
+  private var isLoading = false
+  
+  private let action: () async -> Void
+    
+  public init(action: @escaping () async -> Void) {
+    self.action = action
+  }
+  
+  public var body: some View {
+    AsyncButton {
+      await action()
+    } label: {
+      signInButtonLabel
+    }
+  }
+}
+
+private extension SignInButton {
   private var loadingTint: Color {
     colorScheme == .light ? .white : .black
   }
@@ -26,39 +43,35 @@ public struct SignInButton: View {
     colorScheme == .light ? Color.black.opacity(0.4) : .white.opacity(0.4)
   }
   
-  public init(action: @escaping () async -> Void) {
-    self.action = action
+  var signInButtonLabel: some View {
+    ViewThatFits {
+      defaultButtonLabel
+      
+      compactButtonLabel
+    }
+    .foregroundStyle(buttonForegroundColor)
+    .font(.title3)
+    .overlay(loadingView)
+    .background(.ultraThinMaterial)
+    .background(buttonBackgroundColor ,in: .rect(cornerRadius: 10))
+    .shadow(radius: 1.5, x: 2, y: 2)
   }
   
-  public var body: some View {
-    Button {
-      Task {
-        isLoading = true
-        await action()
-        isLoading = false
-      }
-    } label: {
-      ViewThatFits {
-        Label(Localization.signInButtonTitle, systemImage: "apple.logo")
-          .padding(.horizontal)
-          .frame(height: 44)
-        
-        Image(systemName: "apple.logo")
-          .padding()
-          .frame(width: 44, height: 44)
-          .aspectRatio(1, contentMode: .fit)
-      }
-      .foregroundStyle(buttonForegroundColor)
-      .font(.title3)
-      .overlay(loadingView)
-      .background(.ultraThinMaterial)
-      .background(buttonBackgroundColor ,in: .rect(cornerRadius: 10))
-      .shadow(radius: 1.5, x: 2, y: 2)
-    }
+  var defaultButtonLabel: some View {
+    Label(Localization.signInButtonTitle, systemImage: "apple.logo")
+      .padding(.horizontal)
+      .frame(height: 44)
+  }
+  
+  var compactButtonLabel: some View {
+    Image(systemName: "apple.logo")
+      .padding()
+      .frame(width: 44, height: 44)
+      .aspectRatio(1, contentMode: .fit)
   }
   
   @ViewBuilder
-  private var loadingView: some View {
+  var loadingView: some View {
     ProgressView()
       .opacity(isLoading ? 1 : 0)
       .tint(loadingTint)

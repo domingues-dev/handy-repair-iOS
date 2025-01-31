@@ -7,8 +7,8 @@
 
 import Foundation
 
+public typealias CredentialProvider = @Sendable (AuthRequest) async throws -> any AuthCredential
 public protocol SignInProviderProtocol {
-  typealias CredentialProvider = (AuthRequest) async throws -> any AuthCredential
 
   func signIn(with credentialProvider: @escaping CredentialProvider) async throws -> AuthUser
 }

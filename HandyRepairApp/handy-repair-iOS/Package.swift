@@ -13,14 +13,10 @@ let package = Package(
       targets: ["Authentication"]),
   ],
   dependencies: [
-    .package(name: "HandyRepairNetwork", path: "../HandyRepairNetwork"),
-    .package(name: "HandyRepairExtensions", path: "../HandyRepairDomain")
   ],
   targets: [
     .target(
-      name: "Authentication",
-      dependencies: ["HandyRepairNetwork", "HandyRepairExtensions"],
-      resources: [.process("Resources")]
+      name: "Authentication"
     )
   ]
 )

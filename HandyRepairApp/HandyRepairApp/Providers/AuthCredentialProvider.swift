@@ -10,6 +10,7 @@ import HandyRepairDomain
 import AuthenticationServices
 
 extension AuthorizationController: @retroactive AuthCredentialProviderProtocol {
+  @Sendable
   public func performRequest(_ request: AuthRequest) async throws -> any HandyRepairDomain.AuthCredential {
     do {
       let requests: [ASAuthorizationRequest] = [request.asASAuthorizationRequest]

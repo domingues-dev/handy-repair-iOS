@@ -7,6 +7,7 @@
 
 import SwiftUI
 import AuthenticationServices
+import FirebaseCore
 
 @main
 struct HRApp: App {
@@ -17,11 +18,16 @@ struct HRApp: App {
   var appDelegate
   
   @State
-  private var viewModel = HRAppViewModel()
+  private var viewModel: HRAppViewModel
+  
+  init() {
+    FirebaseApp.configure()
+    self.viewModel = HRAppViewModel()
+  }
   
   var body: some Scene {
     WindowGroup {
-      ContentView(appEventHandler: contentViewEventHandler)
+      ContentView(onEvent: viewModel.handleAppEvent)
       .task {
         do {
           try await appDelegate.configProvider.start()
@@ -29,15 +35,6 @@ struct HRApp: App {
           print(error.localizedDescription)
         }
       }
-    }
-  }
-  
-  private func contentViewEventHandler(_ event: HRAppEvent) async {
-    if case .authenticationEvent(.signInWithAppleButtonTapped) = event {
-      let authEvent = await appDelegate.signIn(with: authController.performRequest)
-      viewModel.handleAppEvent(.authenticationEvent(authEvent))
-    } else {
-      viewModel.handleAppEvent(event)
     }
   }
 }
